@@ -46,13 +46,9 @@ A high-fidelity, interactive HTML5 presentation platform developed for the **KRA
 - **Previous Slide:** `ArrowLeft`
 - **Fullscreen:** `F` key or the ⛶ button in the bottom-right.
 
-## 📝 Authors & Mentorship
+## 📝 Author
 
-Developed as part of the bioinformatics research at **BPRI** (Bioinformatics Project and Research Institute).
-
-- **Supervisor:** [Supervisor Name]
-- **Lead Developer:** **Souvik Ghorui**
-- **Research Team:** [Team Members listed in the presentation]
+Developed with ❤️ by **Souvik Ghorui**.
 
 ---
 *Created with ❤️ for Bioinformatics Research.*
