@@ -1,0 +1,274 @@
+<div class="slide-header animate-up">
+    <h2>STEP 1 — PROTEIN STRUCTURE RETRIEVAL</h2>
+    <p>PDB Structure 6USZ — KRAS G12C</p>
+</div>
+
+<div class="content-body">
+    <!-- Descriptive Highlight -->
+    <div class="description-tag animate-up delay-1">
+        Crystal structure of KRAS G12C mutant complexed with MRTX849 inhibitor
+    </div>
+
+    <div class="structure-grid">
+        <!-- Main Spec Sheet -->
+        <div class="spec-sheet animate-left delay-2">
+            <div class="spec-header">
+                <div class="id-group">
+                    <label>PDB ID</label>
+                    <div class="id-value">6USZ</div>
+                </div>
+                <div class="class-group">
+                    <label>Classification</label>
+                    <div class="class-value">Hydrolase / Inhibitor</div>
+                </div>
+            </div>
+
+            <div class="main-specs">
+                <div class="spec-row">
+                    <span class="s-label">Protein</span>
+                    <span class="s-value">KRAS G12C Mutant</span>
+                </div>
+                <div class="spec-row">
+                    <span class="s-label">Organism</span>
+                    <span class="s-value">Homo sapiens</span>
+                </div>
+                <div class="spec-row">
+                    <span class="s-label">Expression System</span>
+                    <span class="s-value">Escherichia coli</span>
+                </div>
+                <div class="spec-row">
+                    <span class="s-label">Method</span>
+                    <span class="s-value">X-ray Crystallography</span>
+                </div>
+                <div class="spec-row highlight">
+                    <span class="s-label">Inhibitor</span>
+                    <span class="s-value">MRTX849 (Adagrasib)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details Grid -->
+        <div class="details-stack">
+            <!-- Ligands -->
+            <div class="data-card animate-up delay-3">
+                <h4>LIGANDS IDENTIFIED</h4>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="tag qh4">QH4</span>
+                        <p>KRAS Covalent Inhibitor</p>
+                    </div>
+                    <div class="item">
+                        <span class="tag gdp">GDP</span>
+                        <p>Nucleotide Ligand</p>
+                    </div>
+                    <div class="item">
+                        <span class="tag mg">Mg²⁺</span>
+                        <p>Structural GTP Cofactor</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="data-card animate-up delay-4">
+                <h4>TOOLS & DATABASES</h4>
+                <div class="item-list">
+                    <div class="item">
+                        <div class="tool-info">
+                            <strong>Protein Data Bank (PDB)</strong>
+                            <span>3D structure retrieval</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tool-info">
+                            <strong>MMDB</strong>
+                            <span>Domain-based structural analysis</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tool-info">
+                            <strong>GenPept</strong>
+                            <span>Amino acid FASTA sequence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.content-body {
+    margin-top: 10rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description-tag {
+    background: rgba(76, 201, 240, 0.1);
+    border: 1px solid var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: var(--accent-mint);
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.structure-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+}
+
+/* Spec Sheet Styling */
+.spec-sheet {
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 3rem;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.spec-sheet::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 150px; height: 150px;
+    background: radial-gradient(circle at top right, rgba(76, 201, 240, 0.15), transparent);
+}
+
+.spec-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 2rem;
+}
+
+.id-group label, .class-group label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.id-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px rgba(76, 201, 240, 0.4);
+}
+
+.class-value {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.main-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.s-label {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.s-value {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.spec-row.highlight .s-value {
+    color: var(--accent-mint);
+    font-size: 1.3rem;
+    text-shadow: 0 0 15px rgba(78, 234, 255, 0.3);
+}
+
+/* Data Cards Stack */
+.details-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.data-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 2rem;
+    border-radius: 24px;
+    backdrop-filter: blur(15px);
+}
+
+.data-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.tag {
+    min-width: 65px;
+    padding: 0.4rem;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--bg-dark);
+}
+
+.tag.qh4 { background: var(--primary-color); }
+.tag.gdp { background: #4361ee; color: #fff; }
+.tag.mg { background: var(--accent-mint); }
+
+.item p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.tool-info strong {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.2rem;
+}
+
+.tool-info span {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+</style>

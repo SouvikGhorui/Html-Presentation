@@ -1,0 +1,232 @@
+<div class="slide-header animate-up">
+    <h2>CHAPTER 3 — METHODOLOGY</h2>
+    <p>Integrated 8-Step Bioinformatics Workflow — Systematic approach combining sequence, structural & functional analysis</p>
+</div>
+
+<div class="content-body">
+    <!-- Workflow Grid -->
+    <div class="workflow-grid">
+        <!-- Step 1 -->
+        <div class="step-card step-1 animate-scale delay-1">
+            <div class="step-badge">01</div>
+            <div class="step-icon">💎</div>
+            <div class="step-content">
+                <h3>Structure Retrieval</h3>
+            </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="step-card step-2 animate-scale delay-1">
+            <div class="step-badge">02</div>
+            <div class="step-icon">🧬</div>
+            <div class="step-content">
+                <h3>Sequence Retrieval</h3>
+            </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="step-card step-3 animate-scale delay-2">
+            <div class="step-badge">03</div>
+            <div class="step-icon">⚡</div>
+            <div class="step-content">
+                <h3>BLAST Analysis</h3>
+            </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="step-card step-4 animate-scale delay-2">
+            <div class="step-badge">04</div>
+            <div class="step-icon">🧩</div>
+            <div class="step-content">
+                <h3>MSA Clustal Omega</h3>
+            </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="step-card step-5 animate-scale delay-3">
+            <div class="step-badge">05</div>
+            <div class="step-icon">🧊</div>
+            <div class="step-content">
+                <h3>PyMOL Visualization</h3>
+            </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="step-card step-6 animate-scale delay-3">
+            <div class="step-badge">06</div>
+            <div class="step-icon">🌊</div>
+            <div class="step-content">
+                <h3>B-Factor Analysis</h3>
+            </div>
+        </div>
+        <!-- Step 7 -->
+        <div class="step-card step-7 animate-scale delay-4">
+            <div class="step-badge">07</div>
+            <div class="step-icon">🏷️</div>
+            <div class="step-content">
+                <h3>InterProScan Annotation</h3>
+            </div>
+        </div>
+        <!-- Step 8 -->
+        <div class="step-card step-8 animate-scale delay-4">
+            <div class="step-badge">08</div>
+            <div class="step-icon">🌍</div>
+            <div class="step-content">
+                <h3>Database Exploration</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Output Sequence -->
+    <div class="output-flow animate-up delay-5">
+        <div class="output-label">OUTPUT:</div>
+        <div class="flow-items">
+            <div class="flow-box">Biological Interpretation</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-box">Cancer Mechanism Insights</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-box">Targeted Therapy Support</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-box">Precision Medicine</div>
+        </div>
+    </div>
+</div>
+
+<style>
+.content-body {
+    margin-top: 10rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.step-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 2rem 1rem;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.step-badge {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    opacity: 0.1;
+    color: white;
+}
+
+.step-icon {
+    font-size: 2.8rem;
+    transition: transform 0.4s;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
+
+.step-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Individual Step Colors & Glows */
+.step-1 { border-bottom: 4px solid #4cc9f0; }
+.step-1:hover { background: rgba(76, 201, 240, 0.15); box-shadow: 0 0 30px rgba(76, 201, 240, 0.3); }
+
+.step-2 { border-bottom: 4px solid #4361ee; }
+.step-2:hover { background: rgba(67, 97, 238, 0.15); box-shadow: 0 0 30px rgba(67, 97, 238, 0.3); }
+
+.step-3 { border-bottom: 4px solid #f9c74f; }
+.step-3:hover { background: rgba(249, 199, 79, 0.15); box-shadow: 0 0 30px rgba(249, 199, 79, 0.3); }
+
+.step-4 { border-bottom: 4px solid #9d4edd; }
+.step-4:hover { background: rgba(157, 78, 221, 0.15); box-shadow: 0 0 30px rgba(157, 78, 221, 0.3); }
+
+.step-5 { border-bottom: 4px solid #4eeaff; }
+.step-5:hover { background: rgba(78, 234, 255, 0.15); box-shadow: 0 0 30px rgba(78, 234, 255, 0.3); }
+
+.step-6 { border-bottom: 4px solid #ff4e7a; }
+.step-6:hover { background: rgba(255, 78, 122, 0.15); box-shadow: 0 0 30px rgba(255, 78, 122, 0.3); }
+
+.step-7 { border-bottom: 4px solid #06d6a0; }
+.step-7:hover { background: rgba(6, 214, 160, 0.15); box-shadow: 0 0 30px rgba(6, 214, 160, 0.3); }
+
+.step-8 { border-bottom: 4px solid #3f37c9; }
+.step-8:hover { background: rgba(63, 55, 201, 0.15); box-shadow: 0 0 30px rgba(63, 55, 201, 0.3); }
+
+.step-card:hover {
+    transform: translateY(-12px) scale(1.05);
+}
+
+.step-card:hover .step-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Output Flow Styles */
+.output-flow {
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border: 1px solid var(--glass-border);
+    padding: 2rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    backdrop-filter: blur(20px);
+}
+
+.output-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--accent-mint);
+    letter-spacing: 2px;
+}
+
+.flow-items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.flow-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    font-weight: 600;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s;
+}
+
+.flow-box:hover {
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    transform: scale(1.05);
+}
+
+.flow-arrow {
+    color: var(--primary-color);
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+</style>

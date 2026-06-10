@@ -1,0 +1,141 @@
+<div class="slide-header animate-up">
+    <h2>INTERNSHIP OBJECTIVES</h2>
+    <p>Key Goals of the Research Program — Combining computational biology with structural analysis</p>
+</div>
+
+<div class="content-body">
+    <div class="objectives-grid">
+        <!-- Objective 1 -->
+        <div class="obj-card animate-up delay-1">
+            <div class="obj-icon">🧬</div>
+            <div class="obj-text">Study biological significance of KRAS G12C in human lung cancer</div>
+        </div>
+        
+        <!-- Objective 2 -->
+        <div class="obj-card animate-up delay-1">
+            <div class="obj-icon">🔍</div>
+            <div class="obj-text">Perform BLAST sequence similarity analysis using NCBI BLASTp</div>
+        </div>
+
+        <!-- Objective 3 -->
+        <div class="obj-card animate-up delay-2">
+            <div class="obj-icon">🧊</div>
+            <div class="obj-text">Visualize 3D protein structure & ligand interactions via PyMOL</div>
+        </div>
+
+        <!-- Objective 4 -->
+        <div class="obj-card animate-up delay-2">
+            <div class="obj-icon">〰️</div>
+            <div class="obj-text">Analyze protein atomic flexibility through B-factor analysis</div>
+        </div>
+
+        <!-- Objective 5 -->
+        <div class="obj-card animate-up delay-3">
+            <div class="obj-icon">🏷️</div>
+            <div class="obj-text">Identify conserved domains using InterProScan functional annotation</div>
+        </div>
+
+        <!-- Objective 6 -->
+        <div class="obj-card animate-up delay-3">
+            <div class="obj-icon">🌐</div>
+            <div class="obj-text">Explore key databases: NCBI, PDB, UniProt, PubChem, OMIM, MMDB</div>
+        </div>
+
+        <!-- Objective 7 -->
+        <div class="obj-card animate-up delay-4">
+            <div class="obj-icon">🛡️</div>
+            <div class="obj-text">Understand covalent inhibitor mechanisms targeting KRAS G12C</div>
+        </div>
+
+        <!-- Objective 8 -->
+        <div class="obj-card animate-up delay-4">
+            <div class="obj-icon">🎓</div>
+            <div class="obj-text">Develop research skills in computational biology & precision medicine</div>
+        </div>
+    </div>
+</div>
+
+<style>
+.content-body {
+    margin-top: 10rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.obj-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 1.8rem 2.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    backdrop-filter: blur(15px);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.obj-card::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--primary-color);
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+.obj-card:hover {
+    transform: translateX(10px);
+    border-color: var(--primary-color);
+    background: rgba(76, 201, 240, 0.05);
+}
+
+.obj-card:hover::after {
+    width: 8px;
+    opacity: 1;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.obj-icon {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s;
+}
+
+.obj-card:hover .obj-icon {
+    transform: scale(1.1) rotate(5deg);
+    border-color: var(--accent-mint);
+    background: rgba(78, 234, 255, 0.1);
+}
+
+.obj-text {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.obj-card:hover .obj-text {
+    color: #fff;
+}
+</style>

@@ -1,0 +1,294 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">STEP 8 — BIOLOGICAL DATABASE ECOSYSTEM</div>
+        <h2 class="smooth-reveal-up delay-1">Major Bioinformatics Databases Explored</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">Integrating molecular, structural, chemical & clinical data sources</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="database-grid">
+            <!-- NCBI -->
+            <div class="db-card glass-container border-cyan smooth-reveal-scale delay-3">
+                <div class="db-icon bg-cyan-alpha cyan-text">🧬</div>
+                <div class="db-info">
+                    <h3 class="cyan-text">NCBI</h3>
+                    <p class="db-focus italic">Gene & nucleotide sequences</p>
+                    <p class="db-desc">Sequence retrieval, BLAST, mutation analysis, gene expression</p>
+                </div>
+            </div>
+
+            <!-- UniProt -->
+            <div class="db-card glass-container border-mint smooth-reveal-scale delay-4">
+                <div class="db-icon bg-mint-alpha mint-text">🧪</div>
+                <div class="db-info">
+                    <h3 class="mint-text">UniProt</h3>
+                    <p class="db-focus italic">Protein sequences & function</p>
+                    <p class="db-desc">Protein annotation, functional characterization, PTMs</p>
+                </div>
+            </div>
+
+            <!-- PDB -->
+            <div class="db-card glass-container border-gold smooth-reveal-scale delay-5">
+                <div class="db-icon bg-gold-alpha gold-text">⚛️</div>
+                <div class="db-info">
+                    <h3 class="gold-text">PDB</h3>
+                    <p class="db-focus italic">3D protein structures (175k+)</p>
+                    <p class="db-desc">Structural visualization, ligand interaction, drug binding</p>
+                </div>
+            </div>
+
+            <!-- PubChem -->
+            <div class="db-card glass-container border-mint smooth-reveal-scale delay-6">
+                <div class="db-icon bg-mint-alpha mint-text">💊</div>
+                <div class="db-info">
+                    <h3 class="mint-text">PubChem</h3>
+                    <p class="db-focus italic">Chemical & drug information</p>
+                    <p class="db-desc">Ligand structure, drug properties, bioactivity data</p>
+                </div>
+            </div>
+
+            <!-- OMIM -->
+            <div class="db-card glass-container border-red smooth-reveal-scale delay-7">
+                <div class="db-icon bg-red-alpha red-text">🏥</div>
+                <div class="db-info">
+                    <h3 class="red-text">OMIM</h3>
+                    <p class="db-focus italic">Disease & mutation database</p>
+                    <p class="db-desc">Genetic disorder records, KRAS mutation clinical data</p>
+                </div>
+            </div>
+
+            <!-- MMDB -->
+            <div class="db-card glass-container border-orange smooth-reveal-scale delay-8">
+                <div class="db-icon bg-orange-alpha orange-text">📐</div>
+                <div class="db-info">
+                    <h3 class="orange-text">MMDB</h3>
+                    <p class="db-focus italic">Molecular models & domains</p>
+                    <p class="db-desc">Domain-based structural analysis, 3D structural comparison</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Integration Panel -->
+        <div class="integration-panel glass-container smooth-reveal-up delay-10">
+            <div class="panel-content">
+                <div class="verdict-tag">DATA INTEGRATION STRATEGY</div>
+                <p class="panel-text">
+                    Cross-referencing these <strong>heterogeneous data sources</strong> ensures a holistic understanding of KRAS G12C — from its genomic origin to its structural dynamics and clinical implications.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SLIDE 18 SPECIFIC STYLES
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.italic { font-style: italic; }
+
+.slide-body-flow {
+    width: 100%;
+    max-width: 1350px;
+    margin: 12rem auto 0 auto; /* Increased from 10.5rem for better screen balance */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.database-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.db-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem; /* Tighter padding */
+    border-top: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.db-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.db-card:hover::before {
+    opacity: 1;
+}
+
+.db-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(76, 201, 240, 0.1);
+}
+
+.db-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    transition: transform 0.4s ease;
+}
+
+.db-card:hover .db-icon {
+    transform: rotate(12deg) scale(1.1);
+}
+
+.db-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.db-info h3 {
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+
+.db-focus {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+.db-desc {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+/* Color Themes */
+.border-cyan { border-top-color: #00E5FF; }
+.border-mint { border-top-color: #69F0AE; }
+.border-gold { border-top-color: #FFD600; }
+.border-red { border-top-color: #FF6E6E; }
+.border-orange { border-top-color: #FFAB40; }
+
+.cyan-text { color: #00E5FF; }
+.mint-text { color: #69F0AE; }
+.gold-text { color: #FFD600; }
+.red-text { color: #FF6E6E; }
+.orange-text { color: #FFAB40; }
+
+.bg-cyan-alpha { background: rgba(0, 229, 255, 0.1); }
+.bg-mint-alpha { background: rgba(105, 240, 174, 0.1); }
+.bg-gold-alpha { background: rgba(255, 214, 0, 0.1); }
+.bg-red-alpha { background: rgba(255, 110, 110, 0.1); }
+.bg-orange-alpha { background: rgba(255, 171, 64, 0.1); }
+
+/* Integration Panel */
+.integration-panel {
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.05), transparent);
+    border-left: 6px solid var(--primary-color);
+    padding: 1rem 2rem;
+}
+
+.verdict-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+    margin-bottom: 0.4rem;
+}
+
+.panel-text {
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.panel-text strong {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.5s; }
+.delay-5 { animation-delay: 0.6s; }
+.delay-6 { animation-delay: 0.7s; }
+.delay-7 { animation-delay: 0.8s; }
+.delay-8 { animation-delay: 0.9s; }
+.delay-10 { animation-delay: 1.2s; }
+</style>
+
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.db-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>

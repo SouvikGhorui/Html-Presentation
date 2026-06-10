@@ -1,0 +1,235 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">BIOINFORMATICS METHODOLOGY — TOOL COMPARISON</div>
+        <h2 class="smooth-reveal-up delay-1">BLAST vs Clustal Omega</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">Two complementary tools for sequence analysis — different goals, different outputs</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="comparison-grid">
+            <!-- Left Tool: BLAST -->
+            <div class="tool-column smooth-reveal-scale delay-3">
+                <div class="glass-container tool-card blast-theme">
+                    <div class="tool-header">
+                        <i class="fas fa-bolt"></i>
+                        <h3>BLAST</h3>
+                    </div>
+                    <div class="tool-feature-list">
+                        <div class="feature-item">
+                            <span class="feat-lbl">Purpose</span>
+                            <span class="feat-val">Finds similar sequences in database</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-lbl">Input</span>
+                            <span class="feat-val">Single query sequence</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-lbl">Output</span>
+                            <span class="feat-val">Similarity matches</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-lbl">Main Use</span>
+                            <span class="feat-val">Mutation confirmation</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-lbl">Speed</span>
+                            <span class="feat-val highlight-blue">Very Fast (Indexed)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Center Bridge -->
+            <div class="comparison-bridge smooth-reveal-up delay-5">
+                <div class="vs-circle">VS</div>
+                <div class="bridge-line"></div>
+            </div>
+
+            <!-- Right Tool: Clustal Omega -->
+            <div class="tool-column smooth-reveal-scale delay-4">
+                <div class="glass-container tool-card clustal-theme">
+                    <div class="tool-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Clustal Omega</h3>
+                    </div>
+                    <div class="tool-feature-list">
+                        <div class="feature-item">
+                            <span class="feat-lbl">Purpose</span>
+                            <span class="feat-val">Aligns multiple sequences</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-lbl">Input</span>
+                            <span class="feat-val">Multiple protein sequences</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-lbl">Output</span>
+                            <span class="feat-val">Comparative alignment</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-lbl">Main Use</span>
+                            <span class="feat-val">Evolutionary analysis</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feat-lbl">Speed</span>
+                            <span class="feat-val highlight-gold">Slower (Pairwise)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Synthesis Block -->
+        <div class="synthesis-panel glass-container smooth-reveal-up delay-7">
+            <div class="synthesis-content">
+                <div class="synthesis-icon"><i class="fas fa-project-diagram"></i></div>
+                <div class="synthesis-text">
+                    <span class="syn-tag">METHODOLOGICAL SYNERGY</span>
+                    <p>While <strong>BLAST</strong> validates sequence identity, <strong>Clustal Omega</strong> resolves structural motifs across targets.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   FIXING VERTICAL CUTOFF & ALIGNMENT
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+/* New flow container to handle space distribution better */
+.slide-body-flow {
+    width: 100%;
+    max-width: 1200px;
+    margin: 8.5rem auto 0 auto; /* Increased margin to shift boxes down */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spreads content vertically */
+    padding-bottom: 2rem; /* Buffer for the bottom edge */
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 0;
+    align-items: center;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 1.5rem 2rem; /* Optimized padding */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tool-card {
+    border-top: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.tool-card:hover::before {
+    opacity: 1;
+}
+
+.blast-theme { border-top-color: var(--primary-color); }
+.clustal-theme { border-top-color: #FFD600; }
+
+.tool-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.5rem; }
+.tool-header i { font-size: 1.4rem; }
+.tool-header h3 { font-size: 1.5rem; letter-spacing: 2px; }
+
+.tool-feature-list { display: flex; flex-direction: column; gap: 0.8rem; }
+.feature-item { display: flex; flex-direction: column; gap: 0.2rem; }
+.feat-lbl { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; }
+.feat-val { font-size: 0.95rem; color: #fff; }
+
+.highlight-blue { color: var(--primary-color); font-weight: 800; }
+.highlight-gold { color: #FFD600; font-weight: 800; }
+
+/* Bridge Refinement */
+.comparison-bridge { position: relative; height: 100%; display: flex; align-items: center; justify-content: center; }
+.vs-circle {
+    width: 45px; height: 45px;
+    background: var(--bg-accent);
+    border: 2px solid var(--glass-border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 900; color: var(--primary-color);
+    z-index: 5;
+}
+.bridge-line { position: absolute; top: 10%; bottom: 10%; width: 1px; background: rgba(255,255,255,0.1); }
+
+/* Synthesis Panel - Fixed Visibility */
+.synthesis-panel {
+    padding: 1.5rem 2.5rem;
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.1), transparent);
+    border-left: 4px solid var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+.synthesis-content { display: flex; align-items: center; gap: 1.5rem; }
+.synthesis-icon { font-size: 1.5rem; color: var(--primary-color); }
+.syn-tag { font-size: 0.75rem; font-weight: 800; color: var(--primary-color); letter-spacing: 3px; }
+.synthesis-text p { font-size: 1.1rem; line-height: 1.5; color: rgba(255, 255, 255, 0.8); }
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.98); } 100% { opacity: 1; transform: scale(1); } }
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.5s; } .delay-5 { animation-delay: 0.6s; } .delay-7 { animation-delay: 0.8s; }
+
+/* Interactivity */
+.glass-container:hover { transform: translateY(-5px); border-color: var(--primary-color); }
+</style>
+
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.tool-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>

@@ -1,0 +1,284 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">CHAPTER 7 — CONCLUSION</div>
+        <h2 class="smooth-reveal-up delay-1">Conclusion & Scientific Significance</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">Bioinformatics as a bridge between molecular data and cancer therapy</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="conclusion-stack">
+            <!-- Outcome 1: Oncogenic Driver -->
+            <div class="concl-card glass-container border-cyan smooth-reveal-up delay-3">
+                <div class="concl-identity">
+                    <div class="concl-icon bg-cyan-alpha cyan-text">🧬</div>
+                    <div class="concl-title tag-cyan">KRAS G12C as Oncogenic Driver</div>
+                </div>
+                <div class="concl-content">
+                    <p>Glycine→Cysteine substitution creates a <strong>druggable cysteine pocket</strong> — enabling targeted inhibitor design in NSCLC</p>
+                </div>
+            </div>
+
+            <!-- Outcome 2: Integrated Approach -->
+            <div class="concl-card glass-container border-mint smooth-reveal-up delay-4">
+                <div class="concl-identity">
+                    <div class="concl-icon bg-mint-alpha mint-text">🔬</div>
+                    <div class="concl-title tag-mint">Integrated Bioinformatics Approach</div>
+                </div>
+                <div class="concl-content">
+                    <p><strong>BLAST + MSA + PyMOL + InterProScan</strong> together provide comprehensive understanding of mutation-driven cancer mechanisms</p>
+                </div>
+            </div>
+
+            <!-- Outcome 3: Structural Integrity -->
+            <div class="concl-card glass-container border-purple smooth-reveal-up delay-5">
+                <div class="concl-identity">
+                    <div class="concl-icon bg-purple-alpha purple-text">⚛️</div>
+                    <div class="concl-title tag-purple">Structural Integrity Confirmed</div>
+                </div>
+                <div class="concl-content">
+                    <p>Compact tertiary folding preserved with <strong>conserved GTP-binding motifs</strong> intact — despite oncogenic G12C substitution</p>
+                </div>
+            </div>
+
+            <!-- Outcome 4: Targeted Therapy -->
+            <div class="concl-card glass-container border-gold smooth-reveal-up delay-6">
+                <div class="concl-identity">
+                    <div class="concl-icon bg-gold-alpha gold-text">💊</div>
+                    <div class="concl-title tag-gold">Targeted Therapy Validated</div>
+                </div>
+                <div class="concl-content">
+                    <p>Covalent inhibitors <strong>MRTX849 & AMG-510</strong> selectively exploit Switch-II pocket — validating precision medicine approaches</p>
+                </div>
+            </div>
+
+            <!-- Outcome 5: Bioinformatics Impact -->
+            <div class="concl-card glass-container border-orange smooth-reveal-up delay-7">
+                <div class="concl-identity">
+                    <div class="concl-icon bg-orange-alpha orange-text">🌐</div>
+                    <div class="concl-title tag-orange">Bioinformatics Impact</div>
+                </div>
+                <div class="concl-content">
+                    <p>Computational tools serve as a <strong>powerful bridge</strong> between molecular sequence data and clinical cancer therapy design</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Scientific Verdict -->
+        <div class="final-verdict-panel glass-container smooth-reveal-up delay-10">
+            <div class="verdict-inner">
+                <div class="verdict-tag">SCIENTIFIC FINAL VERDICT</div>
+                <p class="verdict-text italic">
+                    The synergy of structural bioinformatics and sequence analysis confirms that KRAS G12C, once considered 'undruggable', is now a <strong>definitive success story</strong> for precision oncology.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SLIDE 22 SPECIFIC STYLES
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.italic { font-style: italic; }
+
+.slide-body-flow {
+    width: 100%;
+    max-width: 1250px;
+    margin: 11rem auto 0 auto; /* Clearance for header */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.conclusion-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 0.8rem 1.8rem;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.concl-card {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    align-items: center;
+    gap: 2rem;
+    border-left: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.concl-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.concl-card:hover::before {
+    opacity: 1;
+}
+
+.concl-card:hover {
+    transform: translateX(12px) scale(1.01);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.concl-identity {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.concl-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.concl-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+}
+
+.concl-content p {
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.concl-content strong {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+/* Color Themes */
+.border-cyan { border-left-color: #00E5FF; }
+.border-mint { border-left-color: #1DE9B6; }
+.border-purple { border-left-color: #CE93D8; }
+.border-gold { border-left-color: #FFD600; }
+.border-orange { border-left-color: #FFAB40; }
+
+.tag-cyan { color: #00E5FF; }
+.tag-mint { color: #1DE9B6; }
+.tag-purple { color: #CE93D8; }
+.tag-gold { color: #FFD600; }
+.tag-orange { color: #FFAB40; }
+
+.bg-cyan-alpha { background: rgba(0, 229, 255, 0.1); }
+.bg-mint-alpha { background: rgba(29, 233, 182, 0.1); }
+.bg-purple-alpha { background: rgba(206, 147, 216, 0.1); }
+.bg-gold-alpha { background: rgba(255, 214, 0, 0.1); }
+.bg-orange-alpha { background: rgba(255, 171, 64, 0.1); }
+
+/* Final Verdict Panel */
+.final-verdict-panel {
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.08), transparent);
+    border-left: 6px solid var(--primary-color);
+    padding: 1.2rem 2.5rem;
+    margin-top: auto;
+}
+
+.verdict-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.verdict-text {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.verdict-text strong {
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.5s; }
+.delay-5 { animation-delay: 0.6s; }
+.delay-6 { animation-delay: 0.7s; }
+.delay-7 { animation-delay: 0.8s; }
+.delay-10 { animation-delay: 1.2s; }
+</style>
+
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.concl-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>

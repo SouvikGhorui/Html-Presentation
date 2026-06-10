@@ -1,0 +1,249 @@
+<div class="slide-header animate-up">
+    <h2>STEP 3 — BLAST SEQUENCE ANALYSIS</h2>
+    <p>BLASTp — Sequence Similarity Analysis: Validating identity & evolutionary conservation</p>
+</div>
+
+<div class="content-body">
+    <!-- Results Dashboard -->
+    <div class="results-dashboard animate-scale delay-1">
+        <div class="result-pod">
+            <div class="pod-value">99–100%</div>
+            <div class="pod-label">Query Coverage</div>
+        </div>
+        <div class="result-pod highlight">
+            <div class="pod-value">~1e⁻¹²⁵</div>
+            <div class="pod-label">E-Value (Significant)</div>
+        </div>
+        <div class="result-pod">
+            <div class="pod-value">99.41%</div>
+            <div class="pod-label">Sequence Identity</div>
+        </div>
+        <div class="result-pod">
+            <div class="pod-value">348–351</div>
+            <div class="pod-label">Alignment Score</div>
+        </div>
+    </div>
+
+    <div class="blast-main">
+        <!-- Procedure Steps -->
+        <div class="procedure-panel animate-left delay-2">
+            <h4>PROCEDURE STEPS</h4>
+            <div class="step-timeline">
+                <div class="step-item">
+                    <span class="s-num">1</span>
+                    <p>Access NCBI BLASTp server</p>
+                </div>
+                <div class="step-item">
+                    <span class="s-num">2</span>
+                    <p>Submit KRAS G12C amino acid sequence</p>
+                </div>
+                <div class="step-item">
+                    <span class="s-num">3</span>
+                    <p>Select non-redundant protein database</p>
+                </div>
+                <div class="step-item">
+                    <span class="s-num">4</span>
+                    <p>Apply Homo sapiens organism filter</p>
+                </div>
+                <div class="step-item">
+                    <span class="s-num">5</span>
+                    <p>Analyze top 100 BLAST hits</p>
+                </div>
+                <div class="step-item">
+                    <span class="s-num">6</span>
+                    <p>Generate phylogenetic relationships</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Observations -->
+        <div class="obs-panel animate-up delay-3">
+            <h4>KEY OBSERVATIONS</h4>
+            <div class="obs-grid">
+                <div class="obs-card">
+                    <div class="obs-icon">🎯</div>
+                    <p>Near-perfect match with human KRAS proteins</p>
+                </div>
+                <div class="obs-card">
+                    <div class="obs-icon">🔬</div>
+                    <p>Confirmed hits: 10NU_A, 6OIM_A structures</p>
+                </div>
+                <div class="obs-card">
+                    <div class="obs-icon">🐒</div>
+                    <p>Strong evolutionary conservation in primates</p>
+                </div>
+                <div class="obs-card">
+                    <div class="obs-icon">⛓️</div>
+                    <p>Core GTPase domain architecture preserved</p>
+                </div>
+                <div class="obs-card wide">
+                    <div class="obs-icon">⚕️</div>
+                    <p>Diagnostic relevance in cancer confirmed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.content-body {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    width: 90%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Results Dashboard - Responsive Grid */
+.results-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2vw;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2vh 2vw;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+}
+
+.result-pod {
+    text-align: center;
+    padding: 1.5vh 1vw;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.result-pod.highlight {
+    background: rgba(76, 201, 240, 0.08);
+    border-color: var(--primary-color);
+}
+
+.pod-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5rem, 4vh, 2.5rem);
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5vh;
+}
+
+.pod-label {
+    font-size: clamp(0.6rem, 1.2vh, 0.8rem);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+}
+
+/* Main Layout - Flexible Columns */
+.blast-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2vw;
+    align-items: stretch;
+}
+
+.procedure-panel, .obs-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 3vh 2.5vw;
+    border-radius: 24px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-mint);
+    letter-spacing: 1.5px;
+    margin-bottom: 3vh;
+    font-size: clamp(0.9rem, 2vh, 1.1rem);
+    text-transform: uppercase;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1vw;
+}
+
+/* Timeline Realignment */
+.step-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    flex-grow: 1;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.s-num {
+    width: clamp(25px, 4vh, 35px);
+    height: clamp(25px, 4vh, 35px);
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+}
+
+.step-item p {
+    font-size: clamp(0.8rem, 1.8vh, 1rem);
+    color: var(--text-main);
+}
+
+/* Observations Grid Realignment */
+.obs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5vh 1vw;
+    flex-grow: 1;
+}
+
+.obs-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5vh 1.2vw;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    transition: all 0.3s;
+}
+
+.obs-card.wide {
+    grid-column: span 2;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.obs-icon {
+    font-size: clamp(1rem, 2.5vh, 1.5rem);
+}
+
+.obs-card p {
+    font-size: clamp(0.75rem, 1.7vh, 0.9rem);
+    line-height: 1.4;
+    color: var(--text-main);
+}
+
+@media (max-width: 1024px) {
+    .blast-main {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

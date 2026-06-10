@@ -1,0 +1,249 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">CHAPTER 5 — OBSERVATIONS & FINDINGS</div>
+        <h2 class="smooth-reveal-up delay-1">Key Findings & Observations</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">Comprehensive results from all 8 stages of the bioinformatics analysis</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="findings-grid">
+            <!-- BLAST Analysis -->
+            <div class="finding-card glass-container border-cyan smooth-reveal-scale delay-3">
+                <div class="card-top">
+                    <span class="card-icon cyan-text">⚡</span>
+                    <h3 class="cyan-text">BLAST Analysis</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>99–100%</strong> query coverage & identity with human KRAS — GTPase domain architecture preserved despite G12C mutation</p>
+                </div>
+            </div>
+
+            <!-- MSA Analysis -->
+            <div class="finding-card glass-container border-mint smooth-reveal-scale delay-4">
+                <div class="card-top">
+                    <span class="card-icon mint-text">🧬</span>
+                    <h3 class="mint-text">MSA (Clustal Omega)</h3>
+                </div>
+                <div class="card-body">
+                    <p>High conservation across <strong>6USZ, 10NU, 6OIM</strong> — conserved GTP-binding motifs confirmed in all three structures</p>
+                </div>
+            </div>
+
+            <!-- PyMOL Visualization -->
+            <div class="finding-card glass-container border-purple smooth-reveal-scale delay-5">
+                <div class="card-top">
+                    <span class="card-icon purple-text">⚛️</span>
+                    <h3 class="purple-text">PyMOL Visualization</h3>
+                </div>
+                <div class="card-body">
+                    <p>N-terminal β-sheets and C-terminal α-helices identified; <strong>GDP, Mg²⁺ and QH4</strong> ligands localized in binding pocket</p>
+                </div>
+            </div>
+
+            <!-- B-Factor Analysis -->
+            <div class="finding-card glass-container border-gold smooth-reveal-scale delay-6">
+                <div class="card-top">
+                    <span class="card-icon gold-text">📉</span>
+                    <h3 class="gold-text">B-Factor Analysis</h3>
+                </div>
+                <div class="card-body">
+                    <p>Regions 1–3 show <strong>high flexibility (72–82 Å²)</strong>; GLU/ASP in surface loops; VAL in stable hydrophobic core</p>
+                </div>
+            </div>
+
+            <!-- InterProScan Domains -->
+            <div class="finding-card glass-container border-orange smooth-reveal-scale delay-7">
+                <div class="card-top">
+                    <span class="card-icon orange-text">🛡️</span>
+                    <h3 class="orange-text">InterProScan Domains</h3>
+                </div>
+                <div class="card-body">
+                    <p>G1–G4 motifs confirmed; <strong>G12C mutation</strong> adjacent to P-loop disrupts GTP hydrolysis — constitutive activation</p>
+                </div>
+            </div>
+
+            <!-- Phylogenetic Analysis -->
+            <div class="finding-card glass-container border-mint-bright smooth-reveal-scale delay-8">
+                <div class="card-top">
+                    <span class="card-icon mint-bright-text">🌳</span>
+                    <h3 class="mint-bright-text">Phylogenetic Analysis</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>47-leaf primate cluster</strong> with KRAS query — strong evolutionary conservation confirms critical signaling role</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Verdict Block -->
+        <div class="verdict-panel glass-container smooth-reveal-up delay-10">
+            <div class="verdict-content">
+                <div class="verdict-tag">SCIENTIFIC VERDICT</div>
+                <p class="verdict-text italic">
+                    The integrated analysis confirms that while the primary architecture remains intact, the <strong>G12C mutation</strong> strategically alters the Switch-II pocket and flexibility dynamics, creating the unique therapeutic window exploited by modern covalent inhibitors.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SLIDE 19 SPECIFIC STYLES
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.italic { font-style: italic; }
+
+.slide-body-flow {
+    width: 100%;
+    max-width: 1350px;
+    margin: 10.5rem auto 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.findings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.finding-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-top: 3px solid transparent;
+}
+
+.finding-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+}
+
+.card-top h3 {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.card-body strong {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+/* Color Accents */
+.border-cyan { border-top-color: #00E5FF; }
+.border-mint { border-top-color: #1DE9B6; }
+.border-purple { border-top-color: #CE93D8; }
+.border-gold { border-top-color: #FFD600; }
+.border-orange { border-top-color: #FFAB40; }
+.border-mint-bright { border-top-color: #69F0AE; }
+
+.cyan-text { color: #00E5FF; }
+.mint-text { color: #1DE9B6; }
+.purple-text { color: #CE93D8; }
+.gold-text { color: #FFD600; }
+.orange-text { color: #FFAB40; }
+.mint-bright-text { color: #69F0AE; }
+
+/* Verdict Panel */
+.verdict-panel {
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.05), transparent);
+    border-left: 6px solid var(--primary-color);
+    padding: 1.2rem 2.5rem;
+}
+
+.verdict-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.verdict-text {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.verdict-text strong {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.5s; }
+.delay-5 { animation-delay: 0.6s; }
+.delay-6 { animation-delay: 0.7s; }
+.delay-7 { animation-delay: 0.8s; }
+.delay-8 { animation-delay: 0.9s; }
+.delay-10 { animation-delay: 1.2s; }
+</style>

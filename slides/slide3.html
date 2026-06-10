@@ -1,0 +1,183 @@
+<div class="slide-header animate-up">
+    <h2>CHAPTER 1 — INTRODUCTION</h2>
+    <p>Cancer, Lung Cancer & KRAS</p>
+</div>
+
+<div class="content-body">
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+        <div class="stat-item animate-scale delay-1">
+            <div class="stat-value">85%</div>
+            <div class="stat-label">NSCLC among all<br>lung cancer cases</div>
+        </div>
+        <div class="stat-item animate-scale delay-1">
+            <div class="stat-value">#1</div>
+            <div class="stat-label">Leading cause of<br>cancer-related deaths</div>
+        </div>
+        <div class="stat-item animate-scale delay-2">
+            <div class="stat-value">G12C</div>
+            <div class="stat-label">Key KRAS mutation<br>in NSCLC patients</div>
+        </div>
+        <div class="stat-item animate-scale delay-2">
+            <div class="stat-value">~30%</div>
+            <div class="stat-label">NSCLC cases carry<br>a KRAS mutation</div>
+        </div>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="info-grid">
+        <div class="info-card animate-up delay-3">
+            <h3>Cancer</h3>
+            <p>Uncontrolled cell growth from genetic alterations, affecting proto-oncogenes, tumor suppressor genes & DNA repair pathways</p>
+        </div>
+        <div class="info-card animate-up delay-3">
+            <h3>G12C Mutation</h3>
+            <p>Glycine → Cysteine substitution at codon 12 — impairs GTP hydrolysis, locks KRAS in permanently active state</p>
+        </div>
+        <div class="info-card animate-up delay-4">
+            <h3>Lung Cancer Types</h3>
+            <p>NSCLC (85%) vs SCLC (15%). Risk factors: smoking, air pollution, occupational exposure</p>
+        </div>
+        <div class="info-card animate-up delay-4">
+            <h3>Oncogenic Pathway</h3>
+            <p>Activates MAPK/ERK and PI3K/AKT cascades → uncontrolled proliferation & tumor progression</p>
+        </div>
+        <div class="info-card animate-up delay-5">
+            <h3>KRAS Gene</h3>
+            <p>Encodes a GTPase protein — molecular switch alternating between GTP-bound (active) and GDP-bound (inactive) states</p>
+        </div>
+        <div class="info-card animate-up delay-5">
+            <h3>Targeted Therapy</h3>
+            <p>G12C creates a unique cysteine pocket exploited by covalent inhibitors like Adagrasib (MRTX849)</p>
+        </div>
+    </div>
+</div>
+
+<style>
+.content-body {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-item {
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before, .info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.stat-item:hover::before, .info-card:hover::before {
+    opacity: 1;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 30px rgba(76, 201, 240, 0.15);
+}
+
+.stat-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+    text-shadow: 0 0 15px rgba(76, 201, 240, 0.3);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.info-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card:hover {
+    border-color: var(--accent-mint);
+    background: rgba(78, 234, 255, 0.05);
+    transform: translateY(-4px);
+}
+
+.info-card h3 {
+    color: var(--accent-mint);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.info-card p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+</style>
+
+<script>
+    (function() {
+        const elements = document.querySelectorAll('.stat-item, .info-card');
+        elements.forEach(el => {
+            el.addEventListener('mousemove', e => {
+                const rect = el.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                el.style.setProperty('--mouse-x', `${x}%`);
+                el.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>

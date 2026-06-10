@@ -1,0 +1,313 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">EVOLUTIONARY ANALYSIS — PHYLOGENETIC TREE</div>
+        <h2 class="smooth-reveal-up delay-1">KRAS Evolutionary Conservation</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">Strong conservation across primate species confirms critical biological role</p>
+    </div>
+
+    <!-- Centered Body Content -->
+    <div class="slide-body-centered">
+        <div class="main-grid">
+            <!-- Left Column: Chart -->
+            <div class="chart-section smooth-reveal-scale delay-3">
+                <div class="glass-container chart-box">
+                    <div class="chart-header">
+                        <h3>Phylogenetic Cluster Distribution</h3>
+                        <div class="scan-effect"></div>
+                    </div>
+                    
+                    <div class="horizontal-bar-chart">
+                        <div class="bar-row" style="--row-idx: 1;">
+                            <div class="row-info">
+                                <span class="row-label">Primates Cluster A</span>
+                                <span class="row-value" data-target="47.0">0.0</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="--pct: 47%; --fill-color: #69F0AE;"></div>
+                            </div>
+                        </div>
+
+                        <div class="bar-row" style="--row-idx: 2;">
+                            <div class="row-info">
+                                <span class="row-label">Mixed Species Cluster</span>
+                                <span class="row-value" data-target="32.0">0.0</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="--pct: 32%; --fill-color: #FFD600;"></div>
+                            </div>
+                        </div>
+
+                        <div class="bar-row" style="--row-idx: 3;">
+                            <div class="row-info">
+                                <span class="row-label">Primates Cluster B</span>
+                                <span class="row-value" data-target="12.0">0.0</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="--pct: 12%; --fill-color: #00E5FF;"></div>
+                            </div>
+                        </div>
+
+                        <div class="bar-row" style="--row-idx: 4;">
+                            <div class="row-info">
+                                <span class="row-label">Primates Cluster C</span>
+                                <span class="row-value" data-target="7.0">0.0</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="--pct: 7%; --fill-color: #1DE9B6;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Stats & Notes -->
+            <div class="info-section">
+                <div class="glass-container insights-box smooth-reveal-up delay-4">
+                    <div class="panel-header">
+                        <i class="fas fa-dna"></i>
+                        <span>EVOLUTIONARY INSIGHTS</span>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card smooth-reveal-scale delay-5">
+                            <span class="stat-lbl">Total Sequences</span>
+                            <span class="stat-val">98 leaves</span>
+                        </div>
+                        <div class="stat-card smooth-reveal-scale delay-5">
+                            <span class="stat-lbl">Primate Clusters</span>
+                            <span class="stat-val">3 distinct</span>
+                        </div>
+                        <div class="stat-card smooth-reveal-scale delay-6">
+                            <span class="stat-lbl">Conservation</span>
+                            <span class="stat-val highlight">Very High</span>
+                        </div>
+                        <div class="stat-card smooth-reveal-scale delay-6">
+                            <span class="stat-lbl">Query Cluster</span>
+                            <span class="stat-val">Primates A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-container note-box smooth-reveal-up delay-7">
+                    <div class="note-content">
+                        <div class="pulse-dot"></div>
+                        <p>KRAS preserved across primates over millions of years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusion Box -->
+        <div class="footer-conclusion glass-container smooth-reveal-up delay-8">
+            <p>Evolutionary conservation of KRAS confirms its critical role in cellular signaling — structurally preserved, functionally irreplaceable.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SMOOTHING OVERRIDES
+   Using out-expo cubic-bezier for a premium fluid feel
+*/
+@keyframes smoothFadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes smoothScaleIn {
+    0% { opacity: 0; transform: scale(0.96); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.smooth-reveal-up {
+    animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.smooth-reveal-scale {
+    animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.6s; }
+.delay-5 { animation-delay: 0.7s; }
+.delay-6 { animation-delay: 0.8s; }
+.delay-7 { animation-delay: 1.0s; }
+.delay-8 { animation-delay: 1.2s; }
+
+/* Layout Structure */
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.slide-header h2 {
+    font-size: 2.8rem;
+    margin: 0.5rem 0;
+}
+
+.header-subtitle.italic {
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 1.1rem;
+}
+
+.slide-body-centered {
+    width: 100%;
+    max-width: 1200px;
+    margin: 7.5rem auto 0 auto;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    align-items: stretch;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+}
+
+.chart-header h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.bar-row { margin-bottom: 1.8rem; }
+.row-info { display: flex; justify-content: space-between; margin-bottom: 0.8rem; }
+.row-label { font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); font-weight: 500; }
+.row-value { 
+    color: var(--accent-mint); 
+    font-weight: 800; 
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(78, 234, 255, 0.5);
+}
+
+.bar-track { height: 14px; background: rgba(255, 255, 255, 0.05); border-radius: 7px; overflow: hidden; }
+
+.bar-fill { 
+    height: 100%; width: 0; background: var(--fill-color); border-radius: 7px; 
+    box-shadow: 0 0 15px var(--fill-color);
+    animation: barGrow 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; /* Matched to global smoothing */
+    animation-delay: calc(var(--row-idx) * 0.2s + 1.2s);
+}
+@keyframes barGrow { to { width: var(--pct); } }
+
+.info-section { display: flex; flex-direction: column; gap: 1.5rem; }
+.panel-header { display: flex; align-items: center; gap: 0.8rem; color: var(--primary-color); font-weight: 800; margin-bottom: 1.5rem; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.stat-card { 
+    background: rgba(255, 255, 255, 0.02); 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    padding: 1.2rem; 
+    border-radius: 12px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
+}
+
+.stat-lbl { display: block; font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.5rem; }
+.stat-val { font-weight: 700; font-size: 1.2rem; }
+.stat-val.highlight { color: var(--accent-mint); }
+
+.note-box { background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), transparent); }
+.note-content { display: flex; align-items: center; gap: 1.2rem; }
+.pulse-dot { width: 12px; height: 12px; background: var(--accent-mint); border-radius: 50%; box-shadow: 0 0 10px var(--accent-mint); animation: dotPulse 2s infinite; }
+@keyframes dotPulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.6; } }
+
+.footer-conclusion {
+    border-left: 5px solid var(--secondary-color);
+    background: linear-gradient(90deg, rgba(67, 97, 238, 0.1), transparent);
+    padding: 1.5rem 2.5rem;
+    height: auto;
+}
+
+.footer-conclusion p { font-size: 1.2rem; line-height: 1.6; }
+
+/* HOVER SMOOTHNESS */
+.glass-container:hover { 
+    transform: translateY(-8px) scale(1.01); 
+    border-color: var(--primary-color); 
+    box-shadow: 0 15px 45px rgba(0,0,0,0.5); 
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--primary-color);
+}
+</style>
+
+<script>
+// Numeric Counter logic - Optimized for reliability and smoothness
+(function animateNumbers() {
+    const valueElements = document.querySelectorAll('.row-value');
+    
+    valueElements.forEach((el, index) => {
+        const target = parseFloat(el.getAttribute('data-target'));
+        const delay = 1200 + (index * 200); 
+        const duration = 2500; // Slower, smoother count
+        
+        // Explicitly set to zero before starting
+        el.innerText = "0.0";
+        
+        setTimeout(() => {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const rawProgress = Math.min((timestamp - startTimestamp) / duration, 1);
+                
+                // Use out-expo for number count as well to match visual bars
+                const progress = rawProgress === 1 ? 1 : 1 - Math.pow(2, -10 * rawProgress);
+                
+                const currentValue = (progress * target).toFixed(1);
+                el.innerText = currentValue;
+                
+                if (rawProgress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    el.innerText = target.toFixed(1);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }, delay);
+    });
+})();
+</script>

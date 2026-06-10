@@ -1,0 +1,325 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">STEP 7 — INTERPROSCAN DOMAIN ANNOTATION</div>
+        <h2 class="smooth-reveal-up delay-1">Functional Domain Annotation</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">G-Box motifs and conserved domains critical for GTPase activity identified</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="domain-grid">
+            <!-- Left: Primary G-Boxes -->
+            <div class="domain-stack smooth-reveal-scale delay-3">
+                <!-- G1 Box -->
+                <div class="domain-card glass-container border-mint">
+                    <div class="domain-identity">
+                        <div class="domain-tag tag-mint">G1 Box</div>
+                        <div class="domain-pos">Position: 10–17</div>
+                    </div>
+                    <div class="domain-content">
+                        <div class="domain-name">P-loop</div>
+                        <p>Phosphate binding & direct GTP contact</p>
+                    </div>
+                </div>
+
+                <!-- G3 Box -->
+                <div class="domain-card glass-container border-gold">
+                    <div class="domain-identity">
+                        <div class="domain-tag tag-gold">G3 Box</div>
+                        <div class="domain-pos">Position: 57–67</div>
+                    </div>
+                    <div class="domain-content">
+                        <div class="domain-name">Switch II</div>
+                        <p>GTP hydrolysis & downstream effector binding</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Secondary G-Boxes -->
+            <div class="domain-stack smooth-reveal-scale delay-4">
+                <!-- G2 Box -->
+                <div class="domain-card glass-container border-cyan">
+                    <div class="domain-identity">
+                        <div class="domain-tag tag-cyan">G2 Box</div>
+                        <div class="domain-pos">Position: 30–38</div>
+                    </div>
+                    <div class="domain-content">
+                        <div class="domain-name">Switch I</div>
+                        <p>Conformational switching on GTP hydrolysis</p>
+                    </div>
+                </div>
+
+                <!-- G4 Box -->
+                <div class="domain-card glass-container border-red">
+                    <div class="domain-identity">
+                        <div class="domain-tag tag-red">G4 Box</div>
+                        <div class="domain-pos">Position: 116–119</div>
+                    </div>
+                    <div class="domain-content">
+                        <div class="domain-name">Guanine site</div>
+                        <p>Guanine nucleotide recognition and specificity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Annotation Summary Block -->
+        <div class="annotation-legend glass-container smooth-reveal-up delay-6">
+            <div class="legend-header">InterProScan Annotation Types</div>
+            <div class="legend-grid">
+                <div class="leg-card family"><span class="leg-icon">👪</span> Family: RAS Superfamily GTPase</div>
+                <div class="leg-card domain"><span class="leg-icon">🛡️</span> Domain: RAS/RHEB-like GTPase domain</div>
+                <div class="leg-card site"><span class="leg-icon">📍</span> Conserved Sites: GTP/GDP binding residues</div>
+                <div class="leg-card metal"><span class="leg-icon">🔋</span> Metal Ion Sites: Mg²⁺ binding (GTP hydrolysis)</div>
+            </div>
+        </div>
+
+        <!-- Key Finding Block -->
+        <div class="finding-panel glass-container smooth-reveal-up delay-8">
+            <div class="finding-content">
+                <div class="verdict-tag">KEY FINDING</div>
+                <p class="finding-text italic">
+                    The <strong>G12C mutation</strong> lies adjacent to the <strong>G1 box (P-loop)</strong>, directly disrupting normal GTP hydrolysis — locking KRAS in constitutive oncogenic activation.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SLIDE 16 SPECIFIC STYLES
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.italic { font-style: italic; }
+
+.slide-body-flow {
+    width: 100%;
+    max-width: 1300px;
+    margin: 11rem auto 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.domain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.domain-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 1.2rem 1.8rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.domain-card {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    border-left: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.domain-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.domain-card:hover::before {
+    opacity: 1;
+}
+
+.domain-card:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+}
+
+.domain-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.domain-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.domain-pos {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+}
+
+.domain-content .domain-name {
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    font-style: italic;
+}
+
+.domain-content p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+/* Color Accents */
+.border-mint { border-left-color: #69F0AE; }
+.border-gold { border-left-color: #FFD600; }
+.border-cyan { border-left-color: #00E5FF; }
+.border-red { border-left-color: #FF6E6E; }
+
+.tag-mint { color: #69F0AE; }
+.tag-gold { color: #FFD600; }
+.tag-cyan { color: #00E5FF; }
+.tag-red { color: #FF6E6E; }
+
+.domain-name.tag-mint { color: #69F0AE; }
+.domain-name.tag-gold { color: #FFD600; }
+.domain-name.tag-cyan { color: #00E5FF; }
+.domain-name.tag-red { color: #FF6E6E; }
+
+/* Annotation Legend */
+.annotation-legend {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.2rem;
+}
+
+.legend-header {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.leg-card {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.leg-icon { font-size: 1rem; }
+
+/* Finding Panel */
+.finding-panel {
+    background: linear-gradient(90deg, rgba(255, 214, 0, 0.05), transparent);
+    border-left: 6px solid #FFD600;
+    padding: 1.2rem 2.5rem;
+}
+
+.verdict-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #FFD600;
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.finding-text {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.finding-text strong {
+    color: #FFD600;
+}
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.6s; }
+.delay-6 { animation-delay: 0.9s; }
+.delay-8 { animation-delay: 1.2s; }
+</style>
+
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.domain-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>

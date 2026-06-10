@@ -1,0 +1,90 @@
+<div class="slide-header animate-up">
+    <h2>AGENDA</h2>
+    <p>A complete walkthrough of the 15-day bioinformatics internship project</p>
+</div>
+
+<div class="agenda-container">
+    <div class="agenda-card animate-up delay-1">
+        <span class="num">01</span>
+        <span class="label">Introduction & Cancer Background</span>
+    </div>
+    <div class="agenda-card animate-up delay-1">
+        <span class="num">02</span>
+        <span class="label">Organization Profile — BPRI</span>
+    </div>
+    <div class="agenda-card animate-up delay-2">
+        <span class="num">03</span>
+        <span class="label">Methodology & 8-Step Workflow</span>
+    </div>
+    <div class="agenda-card animate-up delay-2">
+        <span class="num">04</span>
+        <span class="label">BLAST Sequence Similarity Analysis</span>
+    </div>
+    <div class="agenda-card animate-up delay-3">
+        <span class="num">05</span>
+        <span class="label">Multiple Sequence Alignment (MSA)</span>
+    </div>
+    <div class="agenda-card animate-up delay-3">
+        <span class="num">06</span>
+        <span class="label">PyMOL 3D Structural Visualization</span>
+    </div>
+    <div class="agenda-card animate-up delay-4">
+        <span class="num">07</span>
+        <span class="label">B-Factor Protein Flexibility</span>
+    </div>
+    <div class="agenda-card animate-up delay-4">
+        <span class="num">08</span>
+        <span class="label">InterProScan Domain Annotation</span>
+    </div>
+    <div class="agenda-card animate-up delay-5">
+        <span class="num">09</span>
+        <span class="label">Biological Database Ecosystem</span>
+    </div>
+    <div class="agenda-card animate-up delay-5">
+        <span class="num">10</span>
+        <span class="label">Key Findings & Conclusion</span>
+    </div>
+</div>
+
+<style>
+.agenda-container {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agenda-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 1.2rem 2rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.agenda-card:hover {
+    background: rgba(76, 201, 240, 0.1);
+    border-color: var(--primary-color);
+    transform: translateX(10px);
+}
+
+.agenda-card .num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.agenda-card .label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+</style>

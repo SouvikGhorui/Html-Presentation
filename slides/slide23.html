@@ -1,0 +1,288 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">SUGGESTIONS FOR IMPROVEMENT</div>
+        <h2 class="smooth-reveal-up delay-1">Recommendations & Future Directions</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">Enhancing the internship program with advanced research tools</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="suggestions-grid">
+            <!-- 01 Molecular Docking -->
+            <div class="sugg-card glass-container border-cyan smooth-reveal-scale delay-3">
+                <div class="sugg-header">
+                    <span class="sugg-num cyan-text">01</span>
+                    <h3 class="cyan-text">Molecular Docking</h3>
+                </div>
+                <div class="sugg-content">
+                    <p>Add <strong>AutoDock Vina</strong> sessions for direct drug–protein binding affinity scoring</p>
+                </div>
+            </div>
+
+            <!-- 02 MD Simulations -->
+            <div class="sugg-card glass-container border-mint smooth-reveal-scale delay-4">
+                <div class="sugg-header">
+                    <span class="sugg-num mint-text">02</span>
+                    <h3 class="mint-text">MD Simulations</h3>
+                </div>
+                <div class="sugg-content">
+                    <p><strong>GROMACS/AMBER</strong> simulations to study dynamic protein behaviour over time</p>
+                </div>
+            </div>
+
+            <!-- 03 Clinical Integration -->
+            <div class="sugg-card glass-container border-gold smooth-reveal-scale delay-5">
+                <div class="sugg-header">
+                    <span class="sugg-num gold-text">03</span>
+                    <h3 class="gold-text">Clinical Integration</h3>
+                </div>
+                <div class="sugg-content">
+                    <p>Link structural data with <strong>cBioPortal & COSMIC</strong> for patient outcome correlation</p>
+                </div>
+            </div>
+
+            <!-- 04 AI Drug Discovery -->
+            <div class="sugg-card glass-container border-purple smooth-reveal-scale delay-6">
+                <div class="sugg-header">
+                    <span class="sugg-num purple-text">04</span>
+                    <h3 class="purple-text">AI Drug Discovery</h3>
+                </div>
+                <div class="sugg-content">
+                    <p>Introduce <strong>AlphaFold & ML</strong> tools for predicting novel binding conformations</p>
+                </div>
+            </div>
+
+            <!-- 05 Resistance Mechanisms -->
+            <div class="sugg-card glass-container border-orange smooth-reveal-scale delay-7">
+                <div class="sugg-header">
+                    <span class="sugg-num orange-text">05</span>
+                    <h3 class="orange-text">Resistance Mechanisms</h3>
+                </div>
+                <div class="sugg-content">
+                    <p>Advanced sessions on <strong>KRAS resistance</strong> & next-generation inhibitor development</p>
+                </div>
+            </div>
+
+            <!-- 06 Extended Duration -->
+            <div class="sugg-card glass-container border-red smooth-reveal-scale delay-8">
+                <div class="sugg-header">
+                    <span class="sugg-num red-text">06</span>
+                    <h3 class="red-text">Extended Duration</h3>
+                </div>
+                <div class="sugg-content">
+                    <p>Longer program for deeper <strong>KRAS signalling</strong> & combination therapy exploration</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vision Statement Block -->
+        <div class="vision-panel glass-container smooth-reveal-up delay-10">
+            <div class="vision-content">
+                <div class="verdict-tag">FUTURE VISION</div>
+                <p class="vision-text italic">
+                    Integrating these high-throughput computational tools will elevate the research program to <strong>international standards</strong> of drug discovery and structural biology.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SLIDE 23 SPECIFIC STYLES
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.italic { font-style: italic; }
+
+.slide-body-flow {
+    width: 100%;
+    max-width: 1350px;
+    margin: 11rem auto 0 auto; /* Clearance for header */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sugg-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    border-top: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.sugg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.sugg-card:hover::before {
+    opacity: 1;
+}
+
+.sugg-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.sugg-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sugg-num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.sugg-header h3 {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.sugg-content p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sugg-content strong {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+/* Color Themes */
+.border-cyan { border-top-color: #00E5FF; }
+.border-mint { border-top-color: #1DE9B6; }
+.border-gold { border-top-color: #FFD600; }
+.border-purple { border-top-color: #CE93D8; }
+.border-orange { border-top-color: #FFAB40; }
+.border-red { border-top-color: #FF6E6E; }
+
+.cyan-text { color: #00E5FF; }
+.mint-text { color: #1DE9B6; }
+.gold-text { color: #FFD600; }
+.purple-text { color: #CE93D8; }
+.orange-text { color: #FFAB40; }
+.red-text { color: #FF6E6E; }
+
+/* Vision Panel */
+.vision-panel {
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.05), transparent);
+    border-left: 6px solid var(--primary-color);
+    padding: 1.2rem 2.5rem;
+    margin-top: auto;
+}
+
+.verdict-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.vision-text {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.vision-text strong {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.5s; }
+.delay-5 { animation-delay: 0.6s; }
+.delay-6 { animation-delay: 0.7s; }
+.delay-7 { animation-delay: 0.8s; }
+.delay-8 { animation-delay: 0.9s; }
+.delay-10 { animation-delay: 1.2s; }
+</style>
+
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.sugg-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>

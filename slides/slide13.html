@@ -1,0 +1,348 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">STEP 5 — PYMOL STRUCTURAL VISUALIZATION</div>
+        <h2 class="smooth-reveal-up delay-1">3D Molecular Visualization — PyMOL</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">Analyzing secondary structure, ligand binding and protein architecture</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="content-grid">
+            <!-- Left Card: PyMOL Commands -->
+            <div class="content-column smooth-reveal-scale delay-3">
+                <div class="glass-container category-card commands-theme">
+                    <div class="card-header">
+                        <span class="header-icon">⌨</span>
+                        <h3>PyMOL Commands Used</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item delay-1">
+                            <div class="item-tag cmd-blue">fetch 6USZ</div>
+                            <div class="item-desc">Load KRAS G12C structure</div>
+                        </div>
+                        <div class="list-item delay-2">
+                            <div class="item-tag cmd-cyan">remove solvent</div>
+                            <div class="item-desc">Remove water molecules</div>
+                        </div>
+                        <div class="list-item delay-3">
+                            <div class="item-tag cmd-mint">show cartoon</div>
+                            <div class="item-desc">Display ribbon representation</div>
+                        </div>
+                        <div class="list-item delay-4">
+                            <div class="item-tag cmd-gold">spectrum b</div>
+                            <div class="item-desc">Apply B-factor color scheme</div>
+                        </div>
+                        <div class="list-item delay-5">
+                            <div class="item-tag cmd-purple">label resi, name</div>
+                            <div class="item-desc">Label amino acid residues</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card: Visualization Models -->
+            <div class="content-column smooth-reveal-scale delay-4">
+                <div class="glass-container category-card models-theme">
+                    <div class="card-header">
+                        <span class="header-icon">⚛</span>
+                        <h3>Visualization Models</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item delay-1">
+                            <div class="item-tag model-cyan">Cartoon</div>
+                            <div class="item-desc">Secondary structure (helices/sheets/loops)</div>
+                        </div>
+                        <div class="list-item delay-2">
+                            <div class="item-tag model-mint">Stick</div>
+                            <div class="item-desc">Atomic bonds & connectivity</div>
+                        </div>
+                        <div class="list-item delay-3">
+                            <div class="item-tag model-gold">Space-Fill</div>
+                            <div class="item-desc">Molecular volume & packing</div>
+                        </div>
+                        <div class="list-item delay-4">
+                            <div class="item-tag model-purple">Mesh</div>
+                            <div class="item-desc">Surface topology visualization</div>
+                        </div>
+                        <div class="list-item delay-5">
+                            <div class="item-tag model-red">Surface</div>
+                            <div class="item-desc">Exposed residues & binding pockets</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Structural Findings Block (Verdict Style) -->
+        <div class="findings-panel glass-container smooth-reveal-up delay-7">
+            <div class="findings-content">
+                <div class="verdict-tag">STRUCTURAL FINDINGS</div>
+                <div class="findings-details">
+                    <div class="finding-group">
+                        <span class="finding-label">N-terminal:</span> <span class="finding-value">β-sheet rich</span>
+                        <span class="separator">•</span>
+                        <span class="finding-label">C-terminal:</span> <span class="finding-value">α-helical / coiled</span>
+                    </div>
+                    <div class="finding-group">
+                        <span class="finding-label">Ligands:</span> <span class="finding-value">GDP, Mg²⁺, QH4 identified in binding pockets</span>
+                    </div>
+                    <div class="finding-group">
+                        <span class="finding-label">Coloring:</span> <span class="finding-value">Rainbow scheme shows secondary structure topology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SLIDE 13 SPECIFIC STYLES
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.italic { font-style: italic; }
+
+.slide-body-flow {
+    width: 100%;
+    max-width: 1300px;
+    margin: 7.5rem auto 0 auto; /* Reduced from 8.5rem */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem; /* Reduced from 3rem */
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; /* Reduced from 2.5rem */
+    margin-bottom: 1.5rem; /* Reduced from 2rem */
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    padding: 1.5rem; /* Reduced from 2rem */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-card {
+    border-top: 4px solid transparent;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+.commands-theme { border-top-color: var(--primary-color); }
+.models-theme { border-top-color: var(--accent-mint); }
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem; /* Reduced from 2rem */
+}
+
+.header-icon {
+    font-size: 1.5rem; /* Slightly smaller */
+    background: rgba(76, 201, 240, 0.1);
+    width: 42px; /* Smaller */
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.card-header h3 {
+    font-size: 1.4rem; /* Slightly smaller */
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Reduced from 1.2rem */
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Reduced from 1.5rem */
+    padding: 0.6rem 0.8rem; /* Reduced from 0.8rem */
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.list-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(76, 201, 240, 0.3);
+    transform: translateX(10px);
+}
+
+.item-tag {
+    font-family: 'Courier New', monospace;
+    font-weight: 800;
+    padding: 0.3rem 0.8rem; /* Tighter */
+    border-radius: 6px;
+    font-size: 0.85rem; /* Slightly smaller */
+    min-width: 150px; /* Narrower */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.item-desc {
+    font-size: 0.9rem; /* Slightly smaller */
+    color: var(--text-dim);
+}
+
+/* Command Tag Colors */
+.cmd-blue { background: rgba(67, 97, 238, 0.2); color: #4361ee; border: 1px solid #4361ee; }
+.cmd-cyan { background: rgba(0, 229, 255, 0.2); color: #00E5FF; border: 1px solid #00E5FF; }
+.cmd-mint { background: rgba(29, 233, 182, 0.2); color: #1DE9B6; border: 1px solid #1DE9B6; }
+.cmd-gold { background: rgba(255, 214, 0, 0.2); color: #FFD600; border: 1px solid #FFD600; }
+.cmd-purple { background: rgba(206, 147, 216, 0.2); color: #CE93D8; border: 1px solid #CE93D8; }
+
+/* Model Tag Colors */
+.model-cyan { background: rgba(0, 229, 255, 0.15); color: #00E5FF; border-left: 4px solid #00E5FF; }
+.model-mint { background: rgba(29, 233, 182, 0.15); color: #1DE9B6; border-left: 4px solid #1DE9B6; }
+.model-gold { background: rgba(255, 214, 0, 0.15); color: #FFD600; border-left: 4px solid #FFD600; }
+.model-purple { background: rgba(206, 147, 216, 0.15); color: #CE93D8; border-left: 4px solid #CE93D8; }
+.model-red { background: rgba(255, 110, 110, 0.15); color: #FF6E6E; border-left: 4px solid #FF6E6E; }
+
+/* Findings Panel */
+.findings-panel {
+    margin-top: auto;
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.05), rgba(67, 97, 238, 0.05));
+    border-left: 6px solid var(--primary-color);
+    padding: 1.2rem 2.5rem; /* Reduced from 1.5rem 3rem */
+}
+
+.verdict-tag {
+    font-size: 0.75rem; /* Slightly smaller */
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+    margin-bottom: 0.8rem;
+}
+
+.findings-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.finding-group {
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.finding-label {
+    font-weight: 800;
+    color: var(--accent-mint);
+    margin-right: 0.5rem;
+}
+
+.finding-value {
+    color: #fff;
+}
+
+.separator {
+    margin: 0 1rem;
+    color: var(--glass-border);
+}
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.6s; }
+.delay-5 { animation-delay: 0.8s; }
+.delay-7 { animation-delay: 1.2s; }
+
+/* Staggered list items */
+.list-item { animation: smoothFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.list-item.delay-1 { animation-delay: 0.8s; }
+.list-item.delay-2 { animation-delay: 0.9s; }
+.list-item.delay-3 { animation-delay: 1.0s; }
+.list-item.delay-4 { animation-delay: 1.1s; }
+.list-item.delay-5 { animation-delay: 1.2s; }
+
+/* Interactive Hover */
+.glass-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(76, 201, 240, 0.1);
+    border-color: rgba(76, 201, 240, 0.4);
+}
+</style>
+
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.category-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>

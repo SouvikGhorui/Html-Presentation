@@ -1,0 +1,279 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">STRUCTURAL ORGANIZATION</div>
+        <h2 class="smooth-reveal-up delay-1">Secondary & Tertiary Structure of KRAS G12C</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">α-Helices, β-Sheets and Loop regions form the functional 3D architecture</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="structural-stack">
+            <!-- α-Helices -->
+            <div class="struct-card glass-container border-red smooth-reveal-up delay-3">
+                <div class="card-identity">
+                    <div class="struct-tag tag-red">α-Helices</div>
+                    <div class="struct-loc">C-terminal region</div>
+                </div>
+                <div class="card-content">
+                    <p>Tightly packed coiled structures contributing to overall protein stability and shape</p>
+                </div>
+            </div>
+
+            <!-- β-Sheets -->
+            <div class="struct-card glass-container border-gold smooth-reveal-up delay-4">
+                <div class="card-identity">
+                    <div class="struct-tag tag-gold">β-Sheets</div>
+                    <div class="struct-loc">N-terminal region</div>
+                </div>
+                <div class="card-content">
+                    <p>Rigid structural reinforcement through inter-strand hydrogen bonding — provides scaffold for GTP binding</p>
+                </div>
+            </div>
+
+            <!-- Loop Regions -->
+            <div class="struct-card glass-container border-mint smooth-reveal-up delay-5">
+                <div class="card-identity">
+                    <div class="struct-tag tag-mint">Loop Regions</div>
+                    <div class="struct-loc">Throughout protein</div>
+                </div>
+                <div class="card-content">
+                    <p>Flexible connectors between helices & sheets — facilitate conformational changes during signaling & drug binding</p>
+                </div>
+            </div>
+
+            <!-- Turns & Coils -->
+            <div class="struct-card glass-container border-purple smooth-reveal-up delay-6">
+                <div class="card-identity">
+                    <div class="struct-tag tag-purple">Turns & Coils</div>
+                    <div class="struct-loc">Switch I & II</div>
+                </div>
+                <div class="card-content">
+                    <p>Switch regions undergo conformational change upon GTP/GDP exchange — key targets for KRAS inhibitors</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Coding Legend Block -->
+        <div class="legend-panel glass-container smooth-reveal-up delay-8">
+            <div class="legend-inner">
+                <span class="legend-title">PyMOL Color Coding:</span>
+                <div class="legend-items">
+                    <span class="leg-item"><span class="dot bg-red"></span> Red = α-Helices</span>
+                    <span class="leg-item"><span class="dot bg-gold"></span> Yellow = β-Sheets</span>
+                    <span class="leg-item"><span class="dot bg-mint"></span> Green = Loops/Coils</span>
+                    <span class="leg-item"><span class="dot bg-purple"></span> Purple = Switch Regions</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SLIDE 15 SPECIFIC STYLES
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.italic { font-style: italic; }
+
+.slide-body-flow {
+    width: 100%;
+    max-width: 1200px;
+    margin: 11rem auto 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.structural-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 0.8rem 1.8rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.struct-card {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: center;
+    gap: 2.5rem;
+    border-left: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.struct-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.struct-card:hover::before {
+    opacity: 1;
+}
+
+.struct-card:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.card-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.struct-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.struct-loc {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* Color Accents */
+.border-red { border-left-color: #FF5555; }
+.border-gold { border-left-color: #FFD600; }
+.border-mint { border-left-color: #69F0AE; }
+.border-purple { border-left-color: #CE93D8; }
+
+.tag-red { color: #FF5555; }
+.tag-gold { color: #FFD600; }
+.tag-mint { color: #69F0AE; }
+.tag-purple { color: #CE93D8; }
+
+/* Legend Panel */
+.legend-panel {
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+}
+
+.legend-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.legend-title {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.legend-items {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.leg-item {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.bg-red { background-color: #FF5555; color: #FF5555; }
+.bg-gold { background-color: #FFD600; color: #FFD600; }
+.bg-mint { background-color: #69F0AE; color: #69F0AE; }
+.bg-purple { background-color: #CE93D8; color: #CE93D8; }
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.5s; }
+.delay-5 { animation-delay: 0.6s; }
+.delay-6 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 1s; }
+</style>
+
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.struct-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>

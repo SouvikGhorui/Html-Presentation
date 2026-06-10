@@ -1,0 +1,368 @@
+<div class="slide-viewport">
+    <!-- Header Section -->
+    <div class="slide-header smooth-reveal-up">
+        <div class="header-pre-title smooth-reveal-scale">INTERNSHIP LEARNING OUTCOMES</div>
+        <h2 class="smooth-reveal-up delay-1">Skills & Knowledge Gained</h2>
+        <p class="header-subtitle italic smooth-reveal-up delay-2">15 days of intensive bioinformatics training — technical & research growth</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="slide-body-flow">
+        <div class="outcomes-grid">
+            <!-- Bioinformatics Tools -->
+            <div class="outcome-card glass-container border-cyan smooth-reveal-scale delay-3">
+                <div class="outcome-header">
+                    <span class="outcome-icon bg-cyan-alpha cyan-text">🛠️</span>
+                    <h3 class="cyan-text">Bioinformatics Tools</h3>
+                </div>
+                <div class="outcome-list">
+                    <div class="outcome-item delay-1">
+                        <span class="dot bg-cyan"></span>
+                        <p>NCBI BLASTp</p>
+                    </div>
+                    <div class="outcome-item delay-2">
+                        <span class="dot bg-cyan"></span>
+                        <p>Clustal Omega (MSA)</p>
+                    </div>
+                    <div class="outcome-item delay-3">
+                        <span class="dot bg-cyan"></span>
+                        <p>PyMOL Visualization</p>
+                    </div>
+                    <div class="outcome-item delay-4">
+                        <span class="dot bg-cyan"></span>
+                        <p>InterProScan Annotation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biological Databases -->
+            <div class="outcome-card glass-container border-mint smooth-reveal-scale delay-4">
+                <div class="outcome-header">
+                    <span class="outcome-icon bg-mint-alpha mint-text">📊</span>
+                    <h3 class="mint-text">Biological Databases</h3>
+                </div>
+                <div class="outcome-list">
+                    <div class="outcome-item delay-1">
+                        <span class="dot bg-mint"></span>
+                        <p>NCBI, UniProt, PDB</p>
+                    </div>
+                    <div class="outcome-item delay-2">
+                        <span class="dot bg-mint"></span>
+                        <p>PubChem, OMIM, MMDB</p>
+                    </div>
+                    <div class="outcome-item delay-3">
+                        <span class="dot bg-mint"></span>
+                        <p>Sequence retrieval</p>
+                    </div>
+                    <div class="outcome-item delay-4">
+                        <span class="dot bg-mint"></span>
+                        <p>Structural data access</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Computational Analysis -->
+            <div class="outcome-card glass-container border-gold smooth-reveal-scale delay-5">
+                <div class="outcome-header">
+                    <span class="outcome-icon bg-gold-alpha gold-text">💻</span>
+                    <h3 class="gold-text">Computational Analysis</h3>
+                </div>
+                <div class="outcome-list">
+                    <div class="outcome-item delay-1">
+                        <span class="dot bg-gold"></span>
+                        <p>Sequence similarity</p>
+                    </div>
+                    <div class="outcome-item delay-2">
+                        <span class="dot bg-gold"></span>
+                        <p>Domain identification</p>
+                    </div>
+                    <div class="outcome-item delay-3">
+                        <span class="dot bg-gold"></span>
+                        <p>B-factor flexibility</p>
+                    </div>
+                    <div class="outcome-item delay-4">
+                        <span class="dot bg-gold"></span>
+                        <p>Phylogenetic analysis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research & Professional -->
+            <div class="outcome-card glass-container border-purple smooth-reveal-scale delay-6">
+                <div class="outcome-header">
+                    <span class="outcome-icon bg-purple-alpha purple-text">🎓</span>
+                    <h3 class="purple-text">Research & Professional</h3>
+                </div>
+                <div class="outcome-list">
+                    <div class="outcome-item delay-1">
+                        <span class="dot bg-purple"></span>
+                        <p>Scientific thinking</p>
+                    </div>
+                    <div class="outcome-item delay-2">
+                        <span class="dot bg-purple"></span>
+                        <p>Problem solving</p>
+                    </div>
+                    <div class="outcome-item delay-3">
+                        <span class="dot bg-purple"></span>
+                        <p>Data interpretation</p>
+                    </div>
+                    <div class="outcome-item delay-4">
+                        <span class="dot bg-purple"></span>
+                        <p>Research orientation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Career Impact Block -->
+        <div class="impact-panel glass-container smooth-reveal-up delay-8">
+            <div class="impact-content">
+                <div class="verdict-tag">PROGRAM IMPACT</div>
+                <p class="impact-text italic">
+                    This intensive program successfully bridged the gap between <strong>theoretical biology</strong> and <strong>computational research</strong>, equipping me with industry-standard tools for precision oncology analysis.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* 
+   SLIDE 21 SPECIFIC STYLES
+*/
+.slide-viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    z-index: 10;
+}
+
+.header-pre-title {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.italic { font-style: italic; }
+
+.slide-body-flow {
+    width: 100%;
+    max-width: 1300px;
+    margin: 9.5rem auto 0 auto; /* Clearance for header */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.outcomes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.outcome-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    border-top: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.outcome-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.035) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.outcome-card:hover::before {
+    opacity: 1;
+}
+
+.outcome-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.outcome-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.outcome-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.outcome-header h3 {
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.outcome-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.outcome-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: smoothFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.outcome-item p {
+    font-size: 1rem;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* Color Themes */
+.border-cyan { border-top-color: #00E5FF; }
+.border-mint { border-top-color: #1DE9B6; }
+.border-gold { border-top-color: #FFD600; }
+.border-purple { border-top-color: #CE93D8; }
+
+.cyan-text { color: #00E5FF; }
+.mint-text { color: #1DE9B6; }
+.gold-text { color: #FFD600; }
+.purple-text { color: #CE93D8; }
+
+.bg-cyan { background-color: #00E5FF; color: #00E5FF; }
+.bg-mint { background-color: #1DE9B6; color: #1DE9B6; }
+.bg-gold { background-color: #FFD600; color: #FFD600; }
+.bg-purple { background-color: #CE93D8; color: #CE93D8; }
+
+.bg-cyan-alpha { background: rgba(0, 229, 255, 0.1); }
+.bg-mint-alpha { background: rgba(29, 233, 182, 0.1); }
+.bg-gold-alpha { background: rgba(255, 214, 0, 0.1); }
+.bg-purple-alpha { background: rgba(206, 147, 216, 0.1); }
+
+/* Impact Panel */
+.impact-panel {
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.05), transparent);
+    border-left: 6px solid var(--primary-color);
+    padding: 1.2rem 2.5rem;
+}
+
+.verdict-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.impact-text {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.impact-text strong {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes smoothFadeUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes smoothScaleIn { 0% { opacity: 0; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+
+.smooth-reveal-up { animation: smoothFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.smooth-reveal-scale { animation: smoothScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.5s; }
+.delay-5 { animation-delay: 0.6s; }
+.delay-6 { animation-delay: 0.7s; }
+.delay-8 { animation-delay: 1s; }
+
+/* Staggered items */
+.outcome-card.delay-3 .outcome-item.delay-1 { animation-delay: 0.6s; }
+.outcome-card.delay-3 .outcome-item.delay-2 { animation-delay: 0.7s; }
+.outcome-card.delay-3 .outcome-item.delay-3 { animation-delay: 0.8s; }
+.outcome-card.delay-3 .outcome-item.delay-4 { animation-delay: 0.9s; }
+
+.outcome-card.delay-4 .outcome-item.delay-1 { animation-delay: 0.7s; }
+.outcome-card.delay-4 .outcome-item.delay-2 { animation-delay: 0.8s; }
+.outcome-card.delay-4 .outcome-item.delay-3 { animation-delay: 0.9s; }
+.outcome-card.delay-4 .outcome-item.delay-4 { animation-delay: 1.0s; }
+
+.outcome-card.delay-5 .outcome-item.delay-1 { animation-delay: 0.8s; }
+.outcome-card.delay-5 .outcome-item.delay-2 { animation-delay: 0.9s; }
+.outcome-card.delay-5 .outcome-item.delay-3 { animation-delay: 1.0s; }
+.outcome-card.delay-5 .outcome-item.delay-4 { animation-delay: 1.1s; }
+
+.outcome-card.delay-6 .outcome-item.delay-1 { animation-delay: 0.9s; }
+.outcome-card.delay-6 .outcome-item.delay-2 { animation-delay: 1.0s; }
+.outcome-card.delay-6 .outcome-item.delay-3 { animation-delay: 1.1s; }
+.outcome-card.delay-6 .outcome-item.delay-4 { animation-delay: 1.2s; }
+</style>
+
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.outcome-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--mouse-x', `${x}%`);
+                card.style.setProperty('--mouse-y', `${y}%`);
+            });
+        });
+    })();
+</script>
