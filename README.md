@@ -48,9 +48,23 @@ A high-fidelity, interactive HTML5 presentation platform developed for the **KRA
 
 ## 📝 Authors & Mentorship
 
-Developed as part of the bioinformatics research at **BPRI**.
-- **Mentorship:** Under the guidance of Dr. [Lead Researcher Name]
-- **Team:** [Author Names listed in authors-box]
+Developed as part of the bioinformatics research at **BPRI** (Bioinformatics Project and Research Institute).
+
+- **Supervisor:** **Dr. Uma Kumari** (Professor & Senior Bioinformatics Scientist | BPRI)
+- **Lead Developer:** **Souvik Ghorui**
+- **Research Team:**
+  - Aparajita Priyadarshini Mohanty
+  - Anindita Priyadarshini Mohanty
+  - Amruta Prasanna Sarangi
+  - Ambika Rani Sahoo
+  - Deep Prabha Singh
+  - Neha Pradhan
+  - Pragyna Mohanty
+  - Sarita Kumari
+  - Sriyashree Samal
+  - Swayam Shikha Rout
+  - Mahek Nillofar
+  - Pradisha Priyadarshani
 
 ---
 *Created with ❤️ for Bioinformatics Research.*
